@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+:root{
+  --primary:#008000;
+  --second:#70E000;
+  --third:#CCFF33;
+
+  --text-1:#212529;
+  --text-2:#495057;
+  --body-shadow:#F8F9FA;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+  background-color: #f8f9fa;
+
+}
+
+h1, h2, h3, h4,h5, h6,
+.display-4{
+  color: var(--text-1);
+  font-weight: 700;
+}
+
+p{
+  color: var(--text-2);
+  font-weight: 500;
+  font-size: 19px;
+}
+
+a{
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+.navbar{
+  box-shadow: black;
+}
+.navbar .logo{
+  width: 160px;
+}
+
+.navbar .nav-link{
+  font-size: 18px;
+  font-style: 700;
+}
+
+.btn {
+  padding: 14px 18px;
+  border-width: 2px;
+  border-radius: 0;
+}
+.btn-primary{
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover{
+  background-color: var(--second);
+  border-color:var(--second);
+  color: var(--text-2);
+}
+
+
+
+.hero{
+  background-image: url(../img/e2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #50861a5b;
+  z-index: -1;
+}
+
+/*Section*/
+section{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.iconbox{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  border: solid 2px #38b000;
+  background-color: #38b000;
+  border-radius: 100px;
+  flex: none;
+}
+.icon-dental{
+  color:white;
+  font-size: 50px;
+  
+}
+.card-effect {
+  box-shadow: var(--primary);
+  background: white;
+  padding: 25px;
+  transition: all 0.35s ease;
+}
+.card-effect:hover{
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.service{
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+}
+
+.service::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: #38b000;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover > h5,
+.service:hover > p{
+  color: #fff;
+} 
+.service:hover  .iconbox{
+  background-color: white;
+}
+
+.service:hover  .iconbox .icon-dental{
+  color: #38b000;
+}
+
+.service:hover::after{
+  opacity: 1;
+  top: 0;
+}
+
+/*Nosotros*/
+.col-img{
+  background-image: url(../img/e4.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+
+}
+/*Contact*/
+.contact__container,
+.contact__day-hour{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact__hours{
+  height: 500px;
+  padding: 2rem 3.5rem;
+  background-color: #38b000;
+  color: #fff;
+  font-size: 1.1rem
+}
+
+.contact__title-1,
+.contact__text > p{
+  color: #fff;
+}
+
+.contact__day-hour{
+  justify-content: space-between;
+  position: relative;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.contact__day-hour::after{
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid var(--body-shadow);
+  position: absolute;
+  top: 45px;
+  opacity: 0.2;
+}
+
+.contact__links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact__link{
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.contact__link>i{
+  font-size: 1.9rem;
+  color: #38b000;
+}
+.link__title{
+  padding-top:0.4rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.link__text{
+  font-size: 1rem;
+  font-weight: 200;
+}
+/*footer*/
+
+.footer__company{
+  font-size: 0.95em;
+}
+
+.footer__company > span{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(68, 68, 75);
+  font-size:1.5em;
+  padding-left: 0.2em;
+}
+
+.footer__logo{
+  color: var(--text-2);
+  font-size: 1.8em;
+  font-weight: 800;
+}
+
+.footer__social{
+  font-size: 1.9em;
+}
+
+.text-muted{
+  margin-right: 0.4em;
+}
+
+
